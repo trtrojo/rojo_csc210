@@ -11,15 +11,10 @@
 
 public class RainFall {
 	//going to share the array between all functions in the class
-	private double [] rainFallArray;
+	double [] rainFallArray = new double[12];
 
-	public RainFall(double RFArray[]) {
-		//this.rainFallArray = rainFallArray; //this is bad. Why?
-		
-		rainFallArray = new double[RFArray.length];
-		for (int i = 0; i < RFArray.length; i++) {
-			rainFallArray[i] = RFArray[i];
-		}
+	public RainFall(double rainFallArray[]) {
+		this.rainFallArray = rainFallArray;
 	}
 
 	/* getYearRainFall()
