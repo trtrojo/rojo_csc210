@@ -15,7 +15,6 @@ public class RainFall {
 
 	public RainFall(double rainFallArray[]) {
 		this.rainFallArray = rainFallArray;
-		System.out.println("DEBUG: array stored. Length:" + rainFallArray.length);
 	}
 
 	/* getYearRainFall()
@@ -68,6 +67,15 @@ public class RainFall {
 		
 		return lowestRainFall;
 	}
+
+	/* getHighestRainFall()
+	 *
+	 * Gets the highest rainfall on record. Returns as a double.
+	 *
+	 * usage: double x = getHighestRainFall();
+	 *
+	 * TODO: Get the month as well.
+	 */
 
 	public double getHighestRainFall() {
 		double highestRainFall = rainFallArray[0];
