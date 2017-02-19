@@ -86,7 +86,7 @@ public class RunLottery {
 		String topbar = ""; //top bar where ---- go
 		String data = "|"; //where numbers go
 		String bottombar = ""; //bottom bar where --- go
-
+		System.out.println("DEBUG: " + numbers.length); /////////////////////////////////////////////////////////////
 		for (int x = 0; x < numbers.length; x++) {
 
 		topbar = topbar + "-----";
