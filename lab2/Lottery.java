@@ -2,9 +2,9 @@
 
  /*
   * Lottery Application
-  *
   * Tommy Rojo <tommy.rojo@stu.bmcc.cuny.edu>
   *
+  * See page 491 of the book OR view README.md to get prompt.
   * External lottery class to do all of the arethmetic
   *
   */
@@ -19,7 +19,6 @@ private int[] lotteryNumbers = new int[5];
 	/* Lottery()
 	 *
 	 * Constructor Function, this is needed.
-	 *
 	 * As defined in the prompt, the random numbers are generated here
 	 *
 	 * Usage: Lotter lo = Lottery();

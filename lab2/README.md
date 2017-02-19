@@ -18,6 +18,7 @@ There are two matching digits (elements 2 and 4).
 
 lotteryNumbers array:
 7 4 9 1 3
+
 User’s array:
 4 2 9 7 3
 
@@ -26,3 +27,34 @@ lotteryNumbers array. Demonstrate the class in a program that asks the user to
 enter five numbers. The program should display the number of digits that match 
 the randomly generated lottery numbers. If all of the digits match, display a 
 message proclaiming the user a grand prize winner.
+
+---
+#RunLottery.java
+
+	Usage: java RunLottery [--cheat]
+	Options: cheat: Prints the randon numbers generated at the beginning of
+			the program.
+
+
+```shell
+java RunLottery --cheat
+Cheater Mode: Random Numbers are
+ 0  5  1  4  2 
+Lottery Application
+What is your 1st pick? > 1
+What is your 2nd pick? > 5
+What is your 3rd pick? > 1
+What is your 4th pick? > 4
+What is your 5th pick? > 2
+--------------------------------------------------
+You win with 4 correct results!
+Your Numbers:
+---------------------
+| 1 | 5 | 1 | 4 | 2 |
+---------------------
+The Winning Numbers are:
+---------------------
+| 0 | 5 | 1 | 4 | 2 |
+---------------------
+Thanks for Playing!
+```

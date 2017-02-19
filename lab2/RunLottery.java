@@ -2,6 +2,7 @@
 
  /* 
   * Lottery Application -- Application to run.
+  * Tommy Rojo <tommy.rojo@stu.bmcc.cuny.edu>
   *
   * See page 491 of the book OR view README.md to get prompt.
   *
@@ -22,9 +23,8 @@ public class RunLottery {
 		lotteryNumbers = LO.getWinningNumbers();
 
 		/* The below block is for a cheater mode
-		 * 
 		 * To activate, run with the flag --cheat
-		 * 
+		 *
 		 * usage: java RunLottery --cheat
 		 */
 		if (args.length != 0 && args[0].equals("--cheat")) {
