@@ -14,12 +14,12 @@ public class RunLottery {
 	public static void main(String[] args) {
 
 		int[] userPickNumbers = new int[5];
-		int[] winRandNumbers = new int[5];
+		int[] lotteryNumbers = new int[5];
 		int matchNum;
 
 		Lottery LO = new Lottery();
 
-		winRandNumbers = LO.getWinningNumbers();
+		lotteryNumbers = LO.getWinningNumbers();
 
 		/* The below block is for a cheater mode
 		 * 
@@ -29,8 +29,8 @@ public class RunLottery {
 		 */
 		if (args.length != 0 && args[0].equals("--cheat")) {
 			System.out.println("Cheater Mode: Random Numbers are");
-			for(int x = 0; x < winRandNumbers.length; x++) {
-				System.out.print(" " + winRandNumbers[x] + " ");
+			for(int x = 0; x < lotteryNumbers.length; x++) {
+				System.out.print(" " + lotteryNumbers[x] + " ");
 			}
 			System.out.print("\n");			
 		}
@@ -46,7 +46,7 @@ public class RunLottery {
 		matchNum = LO.setLotteryPicks(userPickNumbers);
 
 		//broke this out into a fancy thing.
-		printFancyResult(userPickNumbers, winRandNumbers, matchNum);
+		printFancyResult(userPickNumbers, lotteryNumbers, matchNum);
 
 	}
 
@@ -62,7 +62,7 @@ public class RunLottery {
 	 *
 	 * TODO: Find a way to make nicer.
 	 */
-	public static void printFancyResult(int[] userPickNumbers, int[] winRandNumbers, int matchNum) {
+	public static void printFancyResult(int[] userPickNumbers, int[] lotteryNumbers, int matchNum) {
 
 		System.out.println("--------------------------------------------------");
 
@@ -71,21 +71,21 @@ public class RunLottery {
 			System.out.println("Your Numbers were:");
 			printBoxyNumbers(userPickNumbers);
 			System.out.println("The Winning Numbers are:");
-			printBoxyNumbers(winRandNumbers);
+			printBoxyNumbers(lotteryNumbers);
 			System.out.println("Thanks for Playing!");
 		}
-		else if (matchNum > 0 && matchNum < winRandNumbers.length) {
+		else if (matchNum > 0 && matchNum < lotteryNumbers.length) {
 			System.out.println("You win with " + matchNum + " correct results!");
 			System.out.println("Your Numbers:");
 			printBoxyNumbers(userPickNumbers);
 			System.out.println("The Winning Numbers are:");
-			printBoxyNumbers(winRandNumbers);
+			printBoxyNumbers(lotteryNumbers);
 			System.out.println("Thanks for Playing!");
 		}
 		else {
 			System.out.println("You are a GRAND PRIZE WINNER!");
 			System.out.println("The Winning Numbers were:");
-			printBoxyNumbers(winRandNumbers);
+			printBoxyNumbers(lotteryNumbers);
 			System.out.println("Thanks for Playing!");
 		}
 	}
