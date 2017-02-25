@@ -1,8 +1,6 @@
 all:
-	echo "[*] Removing old files first"
-	rm -rf *.class
-	javac *.java
-	java CalcRainFall
+	g++ CalcRainFall.cc -o ./bin/CalcRainFall
+	./bin/CalcRainFall
 
 clean:
-	$(RM) *.class
+	$(RM) bin/*

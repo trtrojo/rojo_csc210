@@ -102,11 +102,9 @@ public class RunLottery {
 		String data = "|"; //where numbers go
 		String bottombar = "-"; //bottom bar where --- go
 		for (int x = 0; x < numbers.length; x++) {
-
-		topbar = topbar + "----";
-		data = data + " " + numbers[x] + " |";
-		bottombar = bottombar + "----";
-		
+			topbar = topbar + "----";
+			data = data + " " + numbers[x] + " |";
+			bottombar = bottombar + "----";
 		}
 
 		System.out.println(topbar);
