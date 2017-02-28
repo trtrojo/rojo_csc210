@@ -134,7 +134,7 @@ public class RunLottery {
 
 			numbers[x] = getIntInput(m);
 			
-			while (numbers[x] > 10) {
+			while (numbers[x] > 10 || numbers[x] < 0) {
 				System.out.println("Invalid number, please try again!");
 				numbers[x] = getIntInput(m);
 			}

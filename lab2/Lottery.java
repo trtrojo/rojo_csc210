@@ -36,7 +36,6 @@ private int[] lotteryNumbers = new int[5];
 	 * numbers generated in the constructor. Returns an int with the
 	 * number of matching numbers.
 	 *
-	 * THIS IS CONSIDERED BAD DESIGN, THIS IS REQUIRED IN THE PROMPT
 	 *
 	 * usage: int x = setLotteryPicks(userpicks[]);
 	 *
