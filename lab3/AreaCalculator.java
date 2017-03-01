@@ -53,7 +53,7 @@ public class AreaCalculator {
  	 * @param radius - width of cylinder
  	 * @param height - height of cylinder
  	 */
-	public double CalcArea(double radius, double height) {
+	public double calcArea(double radius, double height) {
 	
 		return (Math.PI*radius*radius*height);
 
