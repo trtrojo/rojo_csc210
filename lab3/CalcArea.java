@@ -43,14 +43,32 @@ public class CalcArea {
 
 		System.out.println("Area Calculator -- Follow page 590 for details");
 
-		System.out.println(AC.calcArea(20));
-		System.out.println(AC.calcArea((float) 2,(float) 2));
-		System.out.println(AC.calcArea((double) 2, (double) 2));
-
+		calcAreaPrompt();
 		
 
 	}
 
+	public static void calcAreaPrompt() {
+		double sendType;
+		double width;
+		double length;
+		double height;
+		double radius;
+
+		AreaCalculator AC = new AreaCalculator();
+
+		System.out.println("Enter 1 for area of a circle");
+		System.out.println("Enter 2 for area of a rectangle");
+		System.out.println("Enter 3 for area of a cylinder");	
+		
+		sendType = getDoubleInput("Type?");
+		
+		if (sendType == 1) {
+			radius = getDoubleInput("What is the radius?");
+			System.out.println("The area of " + radius + " is " + AC.calcArea(radius));
+		}
+	}
+		
         /* getDoubleInput(prompt)
          *
          * prints a prompt based on the question and returns a double
