@@ -55,7 +55,7 @@ public class AreaCalculator {
  	 */
 	public double calcArea(double radius, double height) {
 	
-		return (Math.PI*radius*radius*height);
+		return (Math.PI*(radius*radius)*height);
 
 	}
 

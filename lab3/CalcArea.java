@@ -63,10 +63,26 @@ public class CalcArea {
 		
 		sendType = getDoubleInput("Type?");
 		
-		if (sendType == 1) {
+		if (sendType == 1) { //Area of Circle
 			radius = getDoubleInput("What is the radius?");
-			System.out.println("The area of " + radius + " is " + AC.calcArea(radius));
+				while(radius < 0){ radius = getDoubleInput("Radius can't be negative. What is the Radius?"); }
+			System.out.println("The area of the circle is " + AC.calcArea(radius));
 		}
+		else if (sendType == 2) { //Area of Rectangle
+			width = getDoubleInput("What is the width?");
+				while (width < 0) { width = getDoubleInput("Width can't be negative. What is the width?"); }
+			length = getDoubleInput("What is the length?");
+				while (length < 0) { length = getDoubleInput("Length can't be negative. What is the length?"); }
+			System.out.println("The area of the rectangle is " + AC.calcArea((float) width,(float) length));
+		}
+		else if (sendType == 3) { //Area of Cylinder
+			radius = getDoubleInput("What is the radius?");
+				while (radius < 0) { radius = getDoubleInput("Radius can't be negative. What is the radius?"); }
+			height = getDoubleInput("What is the height?");
+				while (height < 0) { height = getDoubleInput("Height can't be negative. What is the heiht?"); }
+			System.out.println("The area of the cylinder is " + AC.calcArea(radius,height));
+		}
+			
 	}
 		
         /* getDoubleInput(prompt)
