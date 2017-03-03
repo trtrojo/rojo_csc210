@@ -39,7 +39,7 @@ public class CalcArea {
 		double height;
 		double radius;
 
-		AreaCalculator AC = new AreaCalculator();
+		Area AC = new Area();
 
 		System.out.println("Area Calculator -- Follow page 590 for details");
 
@@ -55,7 +55,7 @@ public class CalcArea {
 		double height;
 		double radius;
 
-		AreaCalculator AC = new AreaCalculator();
+		Area AC = new Area();
 
 		System.out.println("Enter 1 for area of a circle");
 		System.out.println("Enter 2 for area of a rectangle");

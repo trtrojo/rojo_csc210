@@ -1,6 +1,6 @@
-//AreaCalculator.java
+//Area.java
 
- /* AreaCalculator.java -- Calculating area of shapes
+ /* Area.java -- Calculating area of shapes
  *
  * Tommy Rojo <tommy.rojo@stu.bmcc.cuny.edu>
  *
@@ -13,12 +13,12 @@
 
 import java.lang.Math;
 
-public class AreaCalculator {
+public class Area {
 	
 	/**
 	 * Declared as requested.
 	 */
-	public AreaCalculator() {
+	public Area() {
 	//intentionally left empty
 	}
 
