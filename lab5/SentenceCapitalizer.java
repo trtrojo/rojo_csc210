@@ -11,6 +11,7 @@
   */
 
 import java.util.Scanner;
+import java.lang.*;
 
 public class SentenceCapitalizer {
 
@@ -20,9 +21,10 @@ public class SentenceCapitalizer {
 		System.out.println("Sentence Capitalizer class");
 		
 		Scanner KeyboardInput = new Scanner(System.in);
-		System.out.print("What is the sentence? > ");
+		System.out.println(" What is the sentence? > hello my name is fuckyou! please, go fuck yourself. KTHXBAI!!!!.");
 		
-		sentence = KeyboardInput.nextLine();
+		//sentence = KeyboardInput.nextLine();
+		sentence = " hello my name is no! please, go no yourself. KTHXBAI!!!!.";
 
 		if (isValid(sentence)) {
 			System.out.println(capitalizeSentence(sentence));
@@ -44,11 +46,29 @@ public class SentenceCapitalizer {
 	public static String capitalizeSentence(String str) {
 	
 		StringBuilder strIn = new StringBuilder(str);
+		
+		String[] tokens = str.split("");
 
-		char firstChar = strIn.charAt(0);
-		char upperChar = Character.toUpperCase(firstChar);
+		System.out.println("[DEBUG] TOKEN LENGTH: " + tokens.length);
 
-		strIn.replace(0,1,Character.toString(upperChar));
+		int x = 1; //capitalize next character?
+		
+		for (int i = 0; tokens.length > i; i++) {
+		
+			if (tokens[i].matches("[.?!]") || i == 0) {
+				//i++; 
+
+				//capitalize next found letter
+				for (boolean c = true; c != false && tokens.length > i; i++) {
+					if (tokens[i].matches("[a-zA-Z]")) {
+						System.out.println("[DEBUG] FOUND TOKEN: " + tokens[i]);
+						strIn.replace(i,i + 1, tokens[i].substring(0,1).toUpperCase());
+						c = false;
+					}
+				}
+			}
+
+		}
 
 		return strIn.toString();
 
