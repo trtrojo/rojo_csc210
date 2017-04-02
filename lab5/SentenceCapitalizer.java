@@ -21,10 +21,9 @@ public class SentenceCapitalizer {
 		System.out.println("Sentence Capitalizer class");
 		
 		Scanner KeyboardInput = new Scanner(System.in);
-		System.out.println(" What is the sentence? > hello my name is fuckyou! please, go fuck yourself. KTHXBAI!!!!.");
+		System.out.print("What is the sentence? > ");
 		
-		//sentence = KeyboardInput.nextLine();
-		sentence = " hello my name is no! please, go no yourself. KTHXBAI!!!!.";
+		sentence = KeyboardInput.nextLine();
 
 		if (isValid(sentence)) {
 			System.out.println(capitalizeSentence(sentence));
@@ -49,19 +48,17 @@ public class SentenceCapitalizer {
 		
 		String[] tokens = str.split("");
 
-		System.out.println("[DEBUG] TOKEN LENGTH: " + tokens.length);
-
-		int x = 1; //capitalize next character?
-		
 		for (int i = 0; tokens.length > i; i++) {
 		
 			if (tokens[i].matches("[.?!]") || i == 0) {
-				//i++; 
-
 				//capitalize next found letter
+				//c = capitalize next letter?
+				//need to add bounds checking
 				for (boolean c = true; c != false && tokens.length > i; i++) {
 					if (tokens[i].matches("[a-zA-Z]")) {
 						System.out.println("[DEBUG] FOUND TOKEN: " + tokens[i]);
+
+						//this is so fucking terrible
 						strIn.replace(i,i + 1, tokens[i].substring(0,1).toUpperCase());
 						c = false;
 					}

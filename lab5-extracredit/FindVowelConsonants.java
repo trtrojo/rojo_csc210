@@ -20,7 +20,7 @@ public class FindVowelConsonants {
 		int count = 0;
 		String[] tokens = str.split("");
 		for (int i = 0; i < tokens.length; i++) {
-			if (tokens[i].matches("[a,e,i,o,u]")) {
+			if (tokens[i].matches("[aeiouAEIOU]")) {
 				count++;
 			}
 		}
@@ -34,8 +34,14 @@ public class FindVowelConsonants {
  	 * @param str - Input string to be considered
  	 */
 	public static int findConsonants(String str) {
+		int count = 0;
 		String[] tokens = str.split("");
-		return tokens.length - findVowels(str);
+		for (int i = 0; i < tokens.length; i++) {
+			if (tokens[i].matches("[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]")) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 
