@@ -1,4 +1,7 @@
 all:
 	rm -rf *.class
 	javac *.java
-	java test
+	java DemoEmployee
+
+clean:
+	rm -rf *.class
