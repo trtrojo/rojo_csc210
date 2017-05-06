@@ -29,6 +29,21 @@ public class RetailPriceCalc extends JFrame
 	private final int WINDOW_WIDTH = 800;
 	private final int WINDOW_HEIGHT = 100;
 
+	private class CalcButtonListener implements ActionListener {
+		
+		public void actionPerformed(java.awt.event.ActionEvent e) {
+			String price, percentage;
+			double total;
+			price = priceTextField.getText();
+			percentage = percentageTextField.getText();
+		
+			total = Double.parseDouble(price) + (Double.parseDouble(price) * (Double.parseDouble(percentage) / 100));
+			System.out.println(total);
+			totalTextField.setText(String.valueOf(total));
+		}
+	}
+
+
 	public RetailPriceCalc(){
 
 		setTitle("Retail Price Calculator");
@@ -61,9 +76,8 @@ public class RetailPriceCalc extends JFrame
 		totalTextField = new JTextField(10);
 		totalTextField.setEditable(false);
 
-		//calcButton.addActionListener(new CalcButtonListener());
+		calcButton.addActionListener(new CalcButtonListener());
 
-		calcButton.addActionListener(calcButtonPreformer);
 
 		panel = new JPanel();
 
@@ -80,26 +94,6 @@ public class RetailPriceCalc extends JFrame
 
 		
 
-	}
-
-	public static ActionListener calcButtonPreformer = new ActionListener() {
-		public void actionPreformed(ActionEvent e) {
-
-		}
-	};
-
-	private class CalcButtonListener implements ActionListener {
-	
-		public void actionPreformed(java.awt.event.ActionEvent e) {
-			String price, percentage;
-			double total;
-
-			price = priceTextField.getText();
-			percentage = percentageTextField.getText();
-			
-			total = Double.parseDouble(price) * Double.parseDouble(percentage);
-			System.out.println(total);
-		}
 	}
 
 	public static void main(String[] args) {
