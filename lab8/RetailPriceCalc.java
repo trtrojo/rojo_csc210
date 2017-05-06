@@ -13,6 +13,7 @@ import java.awt.event.*;
 
 public class RetailPriceCalc extends JFrame 
 {
+
 	private JPanel panel;
 
 	private JLabel priceTextLabel;
@@ -29,17 +30,31 @@ public class RetailPriceCalc extends JFrame
 	private final int WINDOW_WIDTH = 800;
 	private final int WINDOW_HEIGHT = 100;
 
+	/*Implements the code for actually modifying text boxes
+ 	 * TODO: Remember that performed is not performed. AAAAAAAAAAAAAAAAAAA
+ 	 */
+
 	private class CalcButtonListener implements ActionListener {
+
+		public CalcButtonListener() {
+			//intentionally left blank
+		}
 		
 		public void actionPerformed(java.awt.event.ActionEvent e) {
 			String price, percentage;
 			double total;
 			price = priceTextField.getText();
 			percentage = percentageTextField.getText();
-		
-			total = Double.parseDouble(price) + (Double.parseDouble(price) * (Double.parseDouble(percentage) / 100));
-			System.out.println(total);
-			totalTextField.setText(String.valueOf(total));
+			
+			try {
+				total = Double.parseDouble(price) + (Double.parseDouble(price) * (Double.parseDouble(percentage) / 100));
+				System.out.println(total);
+				totalTextField.setText(String.valueOf(total));
+			} 
+			 catch (NumberFormatException ex) {
+				System.out.println("Exception -- Number not entered.");
+				totalTextField.setText("Error.");
+			}
 		}
 	}
 
