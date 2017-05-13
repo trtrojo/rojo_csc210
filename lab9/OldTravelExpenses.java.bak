@@ -1,0 +1,54 @@
+/*TravelExpenses.java
+ * TravelExpenses -- Calculate Travel Expenses GUI
+ *
+ * Tommy Rojo <tommy.rojo@stu.bmcc.cuny.edu>
+ *
+ * Follow the instructions on page 846-847
+ *
+ * This is just the loader, the rest of the app will be in separate
+ * modules
+ *
+ */
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class TravelExpenses extends JFrame {
+
+	private JPanel buttonPanel;
+	//private ExpensesPanel expensesPanel;
+	//private ReimbursementsPanel reimbursementsPanel;
+
+
+	private final int WINDOW_WIDTH = 600;
+	private final int WINDOW_HEIGHT = 400;
+
+	//constants based on assignment, base credits to offer user.
+	private final double MEAL_CREDIT = 37.00;
+	private final double PARK_CREDIT = 10.00;
+	private final double TAXI_CREDIT = 20.00;
+	private final double LODGING_CREDIT = 95.00;
+	private final double PV_MILE_CREDIT = 0.27;
+
+	public TravelExpenses() {
+		setTitle("Travel Expenses");
+		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		//TODO: Alternatively, could break this out to a variable eg: BoxLayout boxLayout = new BoxLayout(...
+		setLayout(new BoxLayout(getContentPane(), BoxLayout.X_AXIS));
+
+add(new JButton("Button 1"));
+add(new JButton("Button 2"));
+add(new JButton("Button 3"));
+pack();
+
+		//setLayout(new java.awt.GridLayout(4,5));
+		setVisible(true);
+	}
+
+	public static void main(String args[]) {
+		new TravelExpenses();
+	}
+
+}
